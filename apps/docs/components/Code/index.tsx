@@ -9,25 +9,25 @@ import Terminal from "./Terminal";
 
 
 const initialCode = `
-hi bhai
- bol bhai "Hello World";
+hi anna
+ anna cheppu "Hello World";
  
-  bhai ye hai a = 3;
-  bhai ye hai b = 0;
+  anna idi a = 3;
+  anna idi b = 0;
 
-  jab tak bhai (b < 5) {
-    bol bhai b;
+  anna eppudu varaku (b < 5) {
+    anna cheppu b;
 
-    agar bhai (b == a) {
-      bol bhai "b is equal to a";
-    } nahi to bhai (b == 0) {
-      bol bhai "b is equal to zero";
+    okavela anna (b == a) {
+      anna cheppu "b is equal to a";
+    } lekapothe anna (b == 0) {
+      anna cheppu "b is equal to zero";
     }
 
     b += 1;
   }
 
-bye bhai
+bye anna
 `;
 
 const Code = (props: Props) => {

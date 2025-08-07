@@ -6,16 +6,9 @@ const Footer = (props: Props) => {
   return (
     <footer>
       <div className="text-white text-sm text-center py-4">
-        &copy; 2022{" "}
-        <a className="hover:text-bhagwa-600" href="https://tripathi.dev">
-          Rishabh Tripathi
-        </a>
-        ,{" "}
-        <a
-          className="hover:text-bhagwa-600"
-          href="https://github.com/aniketsingh0104"
-        >
-          Aniket Singh
+        &copy; 2025{" "}
+        <a className="hover:text-bhagwa-600" href="https://github.com/sdfaheemuddin/">
+          Syed Faheemuddin
         </a>
       </div>
     </footer>

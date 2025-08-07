@@ -1,7 +1,7 @@
 {
-  "name": "bhailang",
+  "name": "annalang",
   "version": "0.1.0",
-  "description": "CLI for bhai-lang",
+  "description": "CLI for anna-lang",
   "source": "src/index.ts",
   "main": "bin/index.js",
   "bin": {
@@ -16,17 +16,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DulLabs/bhai-lang.git"
+    "url": "git+https://github.com/sdfaheemuddin/anna-lang"
   },
   "keywords": [
     "programming",
     "language",
-    "bhai-lang",
+    "anna-lang",
     "bl",
     "javascript",
     "typescript"
   ],
   "contributors": [
+    {
+      "name": "Syed Faheemuddin",
+      "url": "https://github.com/sdfaheemuddin"
+    },
     {
       "name": "Aniket Singh",
       "url": "https://github.com/aniketsingh0104"
@@ -38,9 +42,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DulLabs/bhai-lang/issues"
+    "url": "https://github.com/sdfaheemuddin/anna-lang/issues"
   },
-  "homepage": "https://github.com/DulLabs/bhai-lang#readme",
+  "homepage": "https://github.com/sdfaheemuddin/anna-lang#readme",
   "devDependencies": {
     "ts-node": "^10.4.0",
     "ts-jest": "^27.1.2",
