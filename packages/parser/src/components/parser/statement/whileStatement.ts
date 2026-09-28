@@ -1,6 +1,6 @@
 import Statement from ".";
 
-import { TokenTypes } from "../../../constants/bhaiLangSpec";
+import { TokenTypes } from "../../../constants/annaLangSpec";
 import { NodeType } from "../../../constants/constants";
 import { ASTNode } from "../types/nodeTypes";
 
@@ -9,7 +9,7 @@ import Expression from "./expression";
 
 export default class WhileStatement extends Statement {
     getStatement(): ASTNode {
-        this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.JAB_TAK_BHAI);
+        this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.ANNA_EPPUDU_VARAKU);
 
         this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.OPEN_PARENTHESIS_TYPE);
 

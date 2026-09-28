@@ -1,6 +1,6 @@
-import { TokenTypes } from "../../../../../constants/bhaiLangSpec";
+import { TokenTypes } from "../../../../../constants/annaLangSpec";
 import UnsupportedTypeException from "../../../../../exceptions/unsupportedTypeException";
-import BhaiLangModule from "../../../../../module/bhaiLangModule";
+import AnnaLangModule from "../../../../../module/annaLangModule";
 import TokenExecutor from "../../../tokenExecutor";
 import { ASTNode } from "../../../types/nodeTypes";
 
@@ -16,16 +16,16 @@ export default abstract class Literal {
   static getLiteralImpl(tokenType?: string): Literal {
     switch (tokenType) {
       case TokenTypes.NUMBER_TYPE:
-        return BhaiLangModule.getNumericLiteral();
+        return AnnaLangModule.getNumericLiteral();
 
       case TokenTypes.BOOLEAN_TYPE:
-        return BhaiLangModule.getBooleanLiteral();
+        return AnnaLangModule.getBooleanLiteral();
 
       case TokenTypes.STRING_TYPE:
-        return BhaiLangModule.getStringLiteral();
+        return AnnaLangModule.getStringLiteral();
 
-      case TokenTypes.NALLA_TYPE:
-        return BhaiLangModule.getNullLiteral();
+      case TokenTypes.KALI_TYPE:
+        return AnnaLangModule.getNullLiteral();
 
       default:
         throw new UnsupportedTypeException(

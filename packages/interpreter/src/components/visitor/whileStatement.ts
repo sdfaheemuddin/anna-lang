@@ -1,5 +1,5 @@
 import Visitor from ".";
-import { ASTNode } from "bhai-lang-parser";
+import { ASTNode } from "anna-lang-parser";
 
 import RuntimeException from "../../exceptions/runtimeException";
 import InterpreterModule from "../../module/interpreterModule";
@@ -19,14 +19,14 @@ export default class WhileStatement implements Visitor {
       InterpreterModule.getCurrentScope().setLoop(true);
 
 
-      for (let testResult = getConditionValue(), executions = 0; testResult === true || testResult === "sahi"; testResult = getConditionValue(), executions++) {
+      for (let testResult = getConditionValue(), executions = 0; testResult === true || testResult === "nijam"; testResult = getConditionValue(), executions++) {
 
         if (InterpreterModule.getCurrentScope().isBreakStatement()) {
           break;
         }
 
         if (executions > 5000) {
-          throw new RuntimeException("Bohot jyada hi chale jaa rha hai loop");
+          throw new RuntimeException("Anna, loop execution limit exceeded");
         }
 
 

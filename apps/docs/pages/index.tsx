@@ -13,7 +13,7 @@ export default function Docs() {
         <title>Anna-lang - A toy programming language inspired by Bhailang</title>
         <meta property="og:title" content="Anna-lang - A toy programming language inspired by Bhailang" key="title" />
         <meta property="og:type" content="website" key="type" />
-        <meta property="og:url" content="https://bhailang.js.org" key="url" />
+        <meta property="og:url" content="https://sdfaheemuddin.github.io/anna-lang/" key="url" />
         <meta property="og:description" content="Anna-lang - A toy programming language inspired by Bhailang." key="description" />
         <meta name="description" content="Anna-lang - A toy programming language inspired by Bhailang, written in Typescript." />
         <meta property="og:site_name" content="Anna-lang Documentation" key="siteName" />

@@ -5,14 +5,15 @@
   "source": "src/index.ts",
   "main": "bin/index.js",
   "bin": {
-    "bhailang": "./bin/index.js"
+    "annalang": "./bin/index.js"
   },
   "files": [
     "bin"
   ],
   "scripts": {
     "dev": "node --loader ts-node/esm",
-    "build": "tsup src/* --dts --outDir bin"
+    "build": "tsup src/* --dts --outDir bin",
+    "test": "node test/smoke.js"
   },
   "repository": {
     "type": "git",
@@ -55,6 +56,6 @@
     "@types/jest": "^27.4.0",
     "config": "*",
     "tsconfig": "*",
-    "bhai-lang-interpreter": "*"
+    "anna-lang-interpreter": "*"
   }
 }

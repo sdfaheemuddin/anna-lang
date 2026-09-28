@@ -1,5 +1,5 @@
 {
-  "name": "bhai-lang-parser",
+  "name": "anna-lang-parser",
   "version": "0.0.2",
   "description": "Parser for anna-lang",
   "source": "src/index.ts",
@@ -20,7 +20,7 @@
   "keywords": [
     "programming",
     "language",
-    "bhai-lang",
+    "anna-lang",
     "bl",
     "javascript",
     "typescript"

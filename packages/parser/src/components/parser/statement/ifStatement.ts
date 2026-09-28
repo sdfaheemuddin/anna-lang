@@ -1,13 +1,13 @@
 import Statement from ".";
 
-import { TokenTypes } from "../../../constants/bhaiLangSpec";
+import { TokenTypes } from "../../../constants/annaLangSpec";
 import { NodeType } from "../../../constants/constants";
 import TokenExecutor from "../tokenExecutor";
 import { ASTNode } from "../types/nodeTypes";
 
 import Expression from "./expression";
 
-const HANDLED_LOOP_TOKEN_TYPES = [TokenTypes.WARNA_BHAI, TokenTypes.NAHI_TO_BHAI];
+const HANDLED_LOOP_TOKEN_TYPES = [TokenTypes.KAKAPOTHE_ANNA, TokenTypes.LEKAPOTHE_ANNA];
 
 export default class IfStatement extends Statement {
 
@@ -41,21 +41,21 @@ export default class IfStatement extends Statement {
 
   getStatement(): ASTNode {
 
-    const ifStatement = this.getConditionalStatement(TokenTypes.AGAR_BHAI);
+    const ifStatement = this.getConditionalStatement(TokenTypes.OKAVELA_ANNA);
     const alternates: ASTNode[] = [];
 
-    // Loop until we keep getting "nahi to bhai" or "warna bhai"
-    // Break as soon as we get the first "warna bhai" instance
+    // Loop until we keep getting "lekapothe anna" or "kakapothe anna"
+    // Break as soon as we get the first "kakapothe anna" instance
     for (
       let lookahead = this._tokenExecutor.getLookahead();
       lookahead !== null && HANDLED_LOOP_TOKEN_TYPES.includes(lookahead.type);
       lookahead = this._tokenExecutor.getLookahead()
     ) {
-      if (lookahead.type === TokenTypes.WARNA_BHAI) {
+      if (lookahead.type === TokenTypes.KAKAPOTHE_ANNA) {
         alternates.push(this._tokenExecutor.eatTokenAndForwardLookahead(lookahead.type) && Statement.getStatementImpl(this._tokenExecutor.getLookahead()!).getStatement());
         break;
-      } else if (lookahead.type === TokenTypes.NAHI_TO_BHAI) {
-        alternates.push(this.getConditionalStatement(TokenTypes.NAHI_TO_BHAI));
+      } else if (lookahead.type === TokenTypes.LEKAPOTHE_ANNA) {
+        alternates.push(this.getConditionalStatement(TokenTypes.LEKAPOTHE_ANNA));
       }
     }
 

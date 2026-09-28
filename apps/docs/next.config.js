@@ -6,7 +6,8 @@
 const { withSentryConfig } = require('@sentry/nextjs');
 
 const moduleExports = {
-  // Your existing module.exports
+  // GitHub Pages hosts this fork under the repository name.
+  basePath: process.env.NODE_ENV === "production" ? "/anna-lang" : "",
 };
 
 const sentryWebpackPluginOptions = {

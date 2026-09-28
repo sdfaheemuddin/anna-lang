@@ -1,5 +1,5 @@
 {
-  "name": "bhai-lang-interpreter",
+  "name": "anna-lang-interpreter",
   "version": "0.0.1",
   "description": "Interpreter for anna-lang",
   "source": "src/index.ts",
@@ -36,6 +36,6 @@
     "@types/jest": "^27.4.0",
     "config": "*",
     "tsconfig": "*",
-    "bhai-lang-parser": "*"
+    "anna-lang-parser": "*"
   }
 }

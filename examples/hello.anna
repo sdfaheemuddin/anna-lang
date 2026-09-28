@@ -1,0 +1,17 @@
+hi anna
+  anna cheppu "Keka Anna";
+  anna idi empty = kali;
+  anna cheppu nijam, tappu, empty;
+
+  anna idi count = 0;
+  anna eppudu varaku (count < 5) {
+    count += 1;
+    okavela anna (count == 2) {
+      veredi chudu anna;
+    } lekapothe anna (count == 4) {
+      chalu anna;
+    } kakapothe anna {
+      anna cheppu count;
+    }
+  }
+bye anna

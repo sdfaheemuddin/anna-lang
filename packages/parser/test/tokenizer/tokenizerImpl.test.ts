@@ -1,24 +1,24 @@
 import TokenizerImpl from "../../src/components/tokenizer";
-import { SPEC, TokenTypes } from "../../src/constants/bhaiLangSpec";
+import { SPEC, TokenTypes } from "../../src/constants/annaLangSpec";
 import InvalidStateException from "../../src/exceptions/invalidStateException";
 
 const tokenizer = new TokenizerImpl(SPEC);
 
-test("test Tokenizer.getNextToken with HI_BHAI_TYPE should success", () => {
-  tokenizer.initTokenizer(`hi bhai`);
+test("test Tokenizer.getNextToken with HI_ANNA_TYPE should success", () => {
+  tokenizer.initTokenizer(`hi anna`);
 
   expect(tokenizer.getNextToken()).toStrictEqual({
-    type: TokenTypes.HI_BHAI_TYPE,
-    value: "hi bhai",
+    type: TokenTypes.HI_ANNA_TYPE,
+    value: "hi anna",
   });
 });
 
-test("test Tokenizer.getNextToken with BYE_BHAI_TYPE should success", () => {
-  tokenizer.initTokenizer(`bye bhai`);
+test("test Tokenizer.getNextToken with BYE_ANNA_TYPE should success", () => {
+  tokenizer.initTokenizer(`bye anna`);
 
   expect(tokenizer.getNextToken()).toStrictEqual({
-    type: TokenTypes.BYE_BHAI_TYPE,
-    value: "bye bhai",
+    type: TokenTypes.BYE_ANNA_TYPE,
+    value: "bye anna",
   });
 });
 

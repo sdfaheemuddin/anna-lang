@@ -1,5 +1,5 @@
-import NallaPointerException from "../../src/exceptions/nallaPointerException";
-import bhaiLangModule from "../../src/module/bhaiLangModule";
+import KaliPointerException from "../../src/exceptions/kaliPointerException";
+import annaLangModule from "../../src/module/annaLangModule";
 
 import {
   IfStatementNagativeTests,
@@ -19,7 +19,7 @@ type posTestObjType = typeof StatementTests[0];
 type negTestObjType = {
   name: string;
   input: string;
-  output: SyntaxErrorConstructor | typeof NallaPointerException;
+  output: SyntaxErrorConstructor | typeof KaliPointerException;
 };
 
 StatementTests.forEach((testCase) => {
@@ -52,7 +52,7 @@ NegativeExpressionsTests.forEach((testCase) => {
 
 function _runPositiveTests(testCase: posTestObjType) {
   test(testCase.name, () => {
-    const parser = bhaiLangModule.getParser();
+    const parser = annaLangModule.getParser();
     const ast = parser.parse(testCase.input);
     expect(JSON.stringify(ast)).toBe(testCase.output);
   });
@@ -60,16 +60,16 @@ function _runPositiveTests(testCase: posTestObjType) {
 
 function _runNegativeTests(testCase: negTestObjType) {
   test(testCase.name, () => {
-    const parser = bhaiLangModule.getParser();
+    const parser = annaLangModule.getParser();
     expect(() => parser.parse(testCase.input)).toThrow(testCase.output);
   });
 }
 
 // test("jest test", () => {
-//   const parser = bhaiLangModule.getParser();
+//   const parser = annaLangModule.getParser();
 //   console.debug(JSON.stringify(parser.parse(`
-//   hi bhai
-//       bol bhai 9 == 90;
-//       bye bhai
+//   hi anna
+//       anna cheppu 9 == 90;
+//       bye anna
 //   `)));
 // })
