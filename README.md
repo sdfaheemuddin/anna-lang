@@ -8,7 +8,7 @@
 </p>
 <p align="center">
   This is official repository for anna-lang.<br><br>
-  <b>Anna lang is a toy programming language written in Typescript inspired by Bhai lang.</b>
+  <b>Anna Lang is a toy programming language written in TypeScript, based on the original Bhai Lang project and adapted with Telugu-style syntax.</b>
 </p>
 <br>
 
@@ -148,5 +148,5 @@ hi anna
 bye anna
 ```
 
-<h2 align="center">Original Bhai-lang</h2>
-<p align="center">You can explore the bhailang <a href="https://github.com/DulLabs/bhai-lang" target="_blank">here</a>.</p>
+<h2 align="center">Credits & Attribution</h2>
+<p align="center">Anna Lang is based on the original <a href="https://github.com/DulLabs/bhai-lang" target="_blank">Bhai Lang</a> project by DulLabs and its contributors. Anna Lang adapts the language with Telugu-style syntax and additional modifications. The original Bhai Lang project is licensed under the MIT License, and its copyright notice is preserved in this repository.</p>
