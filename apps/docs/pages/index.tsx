@@ -10,13 +10,15 @@ export default function Docs() {
   return (
     <div className="bg-background">
       <Head>
-        <title>Anna-lang - A toy programming language inspired by Bhailang</title>
-        <meta property="og:title" content="Anna-lang - A toy programming language inspired by Bhailang" key="title" />
+        <title>Anna Lang - Telugu-style Toy Programming Language</title>
+        <meta property="og:title" content="Anna Lang - Telugu-style Toy Programming Language" key="title" />
         <meta property="og:type" content="website" key="type" />
         <meta property="og:url" content="https://sdfaheemuddin.github.io/anna-lang/" key="url" />
-        <meta property="og:description" content="Anna-lang - A toy programming language inspired by Bhailang." key="description" />
-        <meta name="description" content="Anna-lang - A toy programming language inspired by Bhailang, written in Typescript." />
-        <meta property="og:site_name" content="Anna-lang Documentation" key="siteName" />
+        <meta property="og:description" content="Anna Lang is a Telugu-style toy programming language written in TypeScript, based on the original Bhai Lang project." key="description" />
+        <meta name="description" content="Anna Lang is a Telugu-style toy programming language written in TypeScript. Try the online playground and learn syntax such as anna idi, anna cheppu and okavela anna." />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://sdfaheemuddin.github.io/anna-lang/" />
+        <meta property="og:site_name" content="Anna Lang Documentation" key="siteName" />
       </Head>
       <Header />
       <Code />
