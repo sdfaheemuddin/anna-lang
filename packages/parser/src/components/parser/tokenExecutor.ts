@@ -21,7 +21,7 @@ export default class TokenExecutor {
 
     if (token.type !== tokenType) {
       throw new SyntaxError(
-        `kya kar rha hai tu??...Unexpected token: "${token.value}", expected : "${tokenType}"`
+        `em chestunnav anna??...Unexpected token: "${token.value}", expected : "${tokenType}"`
       );
     }
 
