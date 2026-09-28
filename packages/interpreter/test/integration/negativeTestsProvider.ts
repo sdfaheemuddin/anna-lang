@@ -1,505 +1,505 @@
 import { RuntimeException } from "../../src";
-import NallaPointerException from "../../src/exceptions/nallaPointerException";
+import KaliPointerException from "../../src/exceptions/kaliPointerException";
 
 
 export const NegativeTestCases = [
   {
     name: "interpreter assigning variable before declaration test, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a = 4;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter assigning variable before declaration test with addition, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a += 4;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter assigning variable before declaration test with subtraction, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a -= 4;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter assigning variable before declaration test with multiplication, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a -= 4;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter assigning variable before declaration test with division, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a /= 4;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter assigning variable before declaration test - 2, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter adding two variables before declaration test, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a + b;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter adding variable with constant before declaration test, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a + 4;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter subtracting variable with constant before declaration test, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a - 4;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter subtracting two variables before declaration test, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a - b;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter multiplying variable with constant before declaration test, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a * 4;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter multiplying two variables before declaration test, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a * b;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter dividing variable with constant before declaration test, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a / 4;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter dividing two variables before declaration test, should throw an exception",
     input: `
-          hi bhai;
+          hi anna;
           a / b;
-          bye bhai;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter printing variable before declaration test, should throw an exception",
     input: `
-          hi bhai;
-          bol bhai a;
-          bye bhai;
+          hi anna;
+          anna cheppu a;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter printing multiple variables before declaration test, should throw an exception",
     input: `
-          hi bhai;
-          bol bhai a, b;
-          bye bhai;
+          hi anna;
+          anna cheppu a, b;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter printing multiple variables with only one of them declared, should throw an exception",
     input: `
-          hi bhai;
-          bhai ye hai a = 8;
-          bol bhai a, b;
-          bye bhai;
+          hi anna;
+          anna idi a = 8;
+          anna cheppu a, b;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter declaring multiple variables with chain assignment, should throw an exception",
     input: `
-          hi bhai;
-          bhai ye hai a = b = 8;
-          bye bhai;
+          hi anna;
+          anna idi a = b = 8;
+          bye anna;
         `,
     exception: RuntimeException,
   },
   {
     name: "interpreter re declare already declared variable, should throw an exception",
     input: `
-        hi bhai;
-        bhai ye hai a;
+        hi anna;
+        anna idi a;
         a = 9;
-        bhai ye hai a = 0;
-        bye bhai;
+        anna idi a = 0;
+        bye anna;
       `,
     exception: RuntimeException,
   },
-  // cases with nalla
+  // cases with kali
   {
-    name: "interpreter use nalla variable in expression, should throw an exception",
+    name: "interpreter use kali variable in expression, should throw an exception",
     input: `
-      hi bhai;
-      bhai ye hai a;
-      bol bhai a + 9;
-      bye bhai;
+      hi anna;
+      anna idi a;
+      anna cheppu a + 9;
+      bye anna;
     `,
-    exception: NallaPointerException,
+    exception: KaliPointerException,
   },
   {
-    name: "interpreter use nalla variable in expression - 2, should throw an exception",
+    name: "interpreter use kali variable in expression - 2, should throw an exception",
     input: `
-      hi bhai;
-      bhai ye hai a = nalla;
-      bol bhai a + 9;
-      bye bhai;
+      hi anna;
+      anna idi a = kali;
+      anna cheppu a + 9;
+      bye anna;
     `,
-    exception: NallaPointerException,
+    exception: KaliPointerException,
   },
   {
-    name: "interpreter use nalla in variable initialisation expression, should throw an exception",
+    name: "interpreter use kali in variable initialisation expression, should throw an exception",
     input: `
-      hi bhai;
-      bhai ye hai a = nalla + 80;
-      bye bhai;
+      hi anna;
+      anna idi a = kali + 80;
+      bye anna;
     `,
-    exception: NallaPointerException,
+    exception: KaliPointerException,
   },
   {
-    name: "interpreter use nalla in variable initialisation expression - 2, should throw an exception",
+    name: "interpreter use kali in variable initialisation expression - 2, should throw an exception",
     input: `
-      hi bhai;
-      bhai ye hai a = nalla + "jam";
-      bye bhai;
+      hi anna;
+      anna idi a = kali + "jam";
+      bye anna;
     `,
-    exception: NallaPointerException,
+    exception: KaliPointerException,
   },
   {
-    name: "interpreter use nalla variable in another variable initialisation expression, should throw an exception",
+    name: "interpreter use kali variable in another variable initialisation expression, should throw an exception",
     input: `
-      hi bhai;
-      bhai ye hai a;
-      bhai ye hai b = a + "hello";
-      bye bhai;
+      hi anna;
+      anna idi a;
+      anna idi b = a + "hello";
+      bye anna;
     `,
-    exception: NallaPointerException,
+    exception: KaliPointerException,
   },
   {
-    name: "interpreter use nalla variable in complex expression, should throw an exception",
+    name: "interpreter use kali variable in complex expression, should throw an exception",
     input: `
-      hi bhai;
-      bhai ye hai a;
-      bhai ye hai b = ((a*9) * a + "hello");
-      bye bhai;
+      hi anna;
+      anna idi a;
+      anna idi b = ((a*9) * a + "hello");
+      bye anna;
     `,
-    exception: NallaPointerException,
+    exception: KaliPointerException,
   },
-  // sahi - galat case
+  // nijam - tappu case
   {
-    name: "interpreter use sahi variable in expression, should throw an exception",
+    name: "interpreter use nijam variable in expression, should throw an exception",
     input: `
-      hi bhai;
-      bhai ye hai a = sahi;
-      bol bhai a + 9;
-      bye bhai;
-    `,
-    exception: RuntimeException,
-  },
-  {
-    name: "interpreter use galat variable in expression, should throw an exception",
-    input: `
-      hi bhai;
-      bhai ye hai a = galat;
-      bol bhai a + 9;
-      bye bhai;
+      hi anna;
+      anna idi a = nijam;
+      anna cheppu a + 9;
+      bye anna;
     `,
     exception: RuntimeException,
   },
   {
-    name: "interpreter use sahi in variable initialisation expression, should throw an exception",
+    name: "interpreter use tappu variable in expression, should throw an exception",
     input: `
-      hi bhai;
-      bhai ye hai a = sahi + 80;
-      bye bhai;
+      hi anna;
+      anna idi a = tappu;
+      anna cheppu a + 9;
+      bye anna;
     `,
     exception: RuntimeException,
   },
   {
-    name: "interpreter use galat in variable initialisation expression, should throw an exception",
+    name: "interpreter use nijam in variable initialisation expression, should throw an exception",
     input: `
-      hi bhai;
-      bhai ye hai a = galat + 80;
-      bye bhai;
+      hi anna;
+      anna idi a = nijam + 80;
+      bye anna;
     `,
     exception: RuntimeException,
   },
   {
-    name: "interpreter use sahi variable in another variable initialisation expression, should throw an exception",
+    name: "interpreter use tappu in variable initialisation expression, should throw an exception",
     input: `
-      hi bhai;
-      bhai ye hai a = sahi;
-      bhai ye hai b = a + "hello";
-      bye bhai;
+      hi anna;
+      anna idi a = tappu + 80;
+      bye anna;
     `,
     exception: RuntimeException,
   },
   {
-    name: "interpreter use galat variable in complex expression, should throw an exception",
+    name: "interpreter use nijam variable in another variable initialisation expression, should throw an exception",
     input: `
-      hi bhai;
-      bhai ye hai a = galat;
-      bhai ye hai b = ((a*9) * a + "hello");
-      bye bhai;
+      hi anna;
+      anna idi a = nijam;
+      anna idi b = a + "hello";
+      bye anna;
+    `,
+    exception: RuntimeException,
+  },
+  {
+    name: "interpreter use tappu variable in complex expression, should throw an exception",
+    input: `
+      hi anna;
+      anna idi a = tappu;
+      anna idi b = ((a*9) * a + "hello");
+      bye anna;
     `,
     exception: RuntimeException,
   },
   // ##########
 
   {
-    name: "complex expression test with one nalla operand, should throw an exception",
+    name: "complex expression test with one kali operand, should throw an exception",
     input: `
-        hi bhai
-        (nalla * (4 + 8 + 10));
-        bye bhai
+        hi anna
+        (kali * (4 + 8 + 10));
+        bye anna
       `,
-    output: NallaPointerException,
+    output: KaliPointerException,
   },
   {
-    name: "complex expression test with one nalla operand and one boolean operand, should throw an exception",
+    name: "complex expression test with one kali operand and one boolean operand, should throw an exception",
     input: `
-        hi bhai
-        (nalla * (sahi + 8 + 10));
-        bye bhai
+        hi anna
+        (kali * (nijam + 8 + 10));
+        bye anna
       `,
     output: RuntimeException,
   },
   {
-    name: "complex expression test with one nalla operand and one boolean operand - 2, should throw nalla pointer exception",
+    name: "complex expression test with one kali operand and one boolean operand - 2, should throw kali pointer exception",
     input: `
-        hi bhai
-        (sahi * (nalla + 8 + 10));
-        bye bhai
+        hi anna
+        (nijam * (kali + 8 + 10));
+        bye anna
       `,
-    output: NallaPointerException,
+    output: KaliPointerException,
   },
   {
-    name: "complex expression test with one nalla operand and one boolean operand - 3, should throw nalla pointer exception",
+    name: "complex expression test with one kali operand and one boolean operand - 3, should throw kali pointer exception",
     input: `
-        hi bhai
-        (nalla + sahi);
-        bye bhai
+        hi anna
+        (kali + nijam);
+        bye anna
       `,
-    output: NallaPointerException,
+    output: KaliPointerException,
   },
   {
     name: "complex expression test with one boolean operand, should throw an exception",
     input: `
-        hi bhai
-        (sahi * (4 + 8 + 10));
-        bye bhai
+        hi anna
+        (nijam * (4 + 8 + 10));
+        bye anna
       `,
     output: RuntimeException,
   },
   {
     name: "additive expression test with only boolean operand, should throw an exception",
     input: `
-        hi bhai
-        sahi + galat;
-        bye bhai
+        hi anna
+        nijam + tappu;
+        bye anna
       `,
     output: RuntimeException,
   },
   {
     name: "additive expression test with only variable boolean operand, should throw an exception",
     input: `
-        hi bhai
-        bhai ye hai a = sahi, b = galat;
+        hi anna
+        anna idi a = nijam, b = tappu;
         a + b;
-        bye bhai
+        bye anna
       `,
     output: RuntimeException,
   },
   {
     name: "multiplicative expression test with only boolean operand, should throw an exception",
     input: `
-        hi bhai
-        sahi * galat;
-        bye bhai
+        hi anna
+        nijam * tappu;
+        bye anna
       `,
     output: RuntimeException,
   },
   {
     name: "multiplicative expression test with only variable boolean operand, should throw an exception",
     input: `
-        hi bhai
-        bhai ye hai a = sahi, b = galat;
+        hi anna
+        anna idi a = nijam, b = tappu;
         a * b;
-        bye bhai
+        bye anna
       `,
     output: RuntimeException,
   },
   {
     name: "division expression test with only boolean operand, should throw an exception",
     input: `
-        hi bhai
-        sahi / galat;
-        bye bhai
+        hi anna
+        nijam / tappu;
+        bye anna
       `,
     output: RuntimeException,
   },
   {
     name: "division expression test with only variable boolean operand, should throw an exception",
     input: `
-        hi bhai
-        bhai ye hai a = sahi, b = galat;
+        hi anna
+        anna idi a = nijam, b = tappu;
         a / b;
-        bye bhai
+        bye anna
       `,
     output: RuntimeException,
   },
   {
-    name: "print statement test with expression containing nalla, should throw an exception",
+    name: "print statement test with expression containing kali, should throw an exception",
     input: `
-        hi bhai
-        bol bhai nalla + 5;
-        bye bhai;
+        hi anna
+        anna cheppu kali + 5;
+        bye anna;
       `,
-    output: NallaPointerException,
+    output: KaliPointerException,
   },
   {
-    name: "complex assign test with expression containing nalla, should throw an exception",
+    name: "complex assign test with expression containing kali, should throw an exception",
     input: `
-        hi bhai
-        bhai ye hai a;
+        hi anna
+        anna idi a;
         a *= 5;
-        bye bhai;
+        bye anna;
       `,
-    output: NallaPointerException,
+    output: KaliPointerException,
   },
   {
-    name: "complex assign test with expression containing sahi, should throw an exception",
+    name: "complex assign test with expression containing nijam, should throw an exception",
     input: `
-        hi bhai
-        bhai ye hai a = sahi;
+        hi anna
+        anna idi a = nijam;
         a *= 5;
-        bye bhai;
+        bye anna;
       `,
-    output: NallaPointerException,
+    output: KaliPointerException,
   },
   {
-    name: "complex assign test with expression containing nalla - 2, should throw an exception",
+    name: "complex assign test with expression containing kali - 2, should throw an exception",
     input: `
-        hi bhai
-        bhai ye hai a = nalla;
+        hi anna
+        anna idi a = kali;
         a /= 5;
-        bye bhai;
+        bye anna;
       `,
-    output: NallaPointerException,
+    output: KaliPointerException,
   },
   // while loop negative tests
   {
     name: "infinite while loop, should throw an exception",
     input: `
-        hi bhai
-        jab tak bhai (sahi) {
+        hi anna
+        anna eppudu varaku (nijam) {
 
         }
-        bye bhai;
+        bye anna;
       `,
     output: RuntimeException,
   },
   {
     name: "infinite condition while loop, should throw an exception",
     input: `
-        hi bhai
-        bhai ye hai a = 0;
-        jab tak bhai (a < 2) {
-          bol bhai "bhai";
+        hi anna
+        anna idi a = 0;
+        anna eppudu varaku (a < 2) {
+          anna cheppu "bhai";
         }
-        bye bhai;
+        bye anna;
       `,
     output: RuntimeException,
   },
   {
     name: "invalid use of break, should throw an exception",
     input: `
-        hi bhai
-        bhai ye hai a = 0;
-        agar bhai (sahi)
-          bas kar bhai;
-        bye bhai;
+        hi anna
+        anna idi a = 0;
+        okavela anna (nijam)
+          chalu anna;
+        bye anna;
       `,
     output: RuntimeException,
   },
   // logical expression negative tests
   {
-    name: "use of nalla with &&, should throw an exception",
+    name: "use of kali with &&, should throw an exception",
     input: `
-        hi bhai
-        bol bhai nalla && 90;
-        bye bhai;
+        hi anna
+        anna cheppu kali && 90;
+        bye anna;
       `,
-    output: NallaPointerException,
+    output: KaliPointerException,
   },
   {
-    name: "use of nalla variable with &&, should throw an exception",
+    name: "use of kali variable with &&, should throw an exception",
     input: `
-        hi bhai
-        bhai ye hai a;
-        bol bhai a && 90;
-        bye bhai;
+        hi anna
+        anna idi a;
+        anna cheppu a && 90;
+        bye anna;
       `,
-    output: NallaPointerException,
+    output: KaliPointerException,
   },
   // modulus operator test
   {
     name: `modulus operator test with invalid operand, should throw an exception`,
     input: `
-      hi bhai;
-      bol bhai "sahi" % 9;
-      bye bhai;
+      hi anna;
+      anna cheppu "nijam" % 9;
+      bye anna;
     `,
     output: RuntimeException,
   },
@@ -507,24 +507,24 @@ export const NegativeTestCases = [
   {
     name: "infinite condition while loop with continue, should throw an exception",
     input: `
-        hi bhai
-        bhai ye hai a = 0;
-        jab tak bhai (a < 2) {
-          agla dekh bhai;
+        hi anna
+        anna idi a = 0;
+        anna eppudu varaku (a < 2) {
+          veredi chudu anna;
           a = 5;
         }
-        bye bhai;
+        bye anna;
       `,
     output: RuntimeException,
   },
   {
     name: "invalid use of continue, should throw an exception",
     input: `
-        hi bhai
-        bhai ye hai a = 0;
-        agar bhai (sahi)
-          agla dekh bhai
-        bye bhai;
+        hi anna
+        anna idi a = 0;
+        okavela anna (nijam)
+          veredi chudu anna
+        bye anna;
       `,
     output: RuntimeException,
   },

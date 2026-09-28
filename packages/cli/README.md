@@ -2,8 +2,8 @@
 <p align="center">
 
 <a href="https://github.com/sdfaheemuddin/anna-lang/"><img alt="Build" src="https://img.shields.io/badge/github-sdfaheemuddin/anna--lang-orange"/></a>
-<a href="https://bhailang.js.org/"><img alt="Build" src="https://img.shields.io/badge/website-annalang.js.org-orange"/></a>
-<a href="https://www.npmjs.com/package/bhailang"><img alt="Build" src="https://img.shields.io/badge/npm-annalang-orange"/></a>
+<a href="https://sdfaheemuddin.github.io/anna-lang/"><img alt="Build" src="https://img.shields.io/badge/website-Anna%20Lang-orange"/></a>
+<a href="https://www.npmjs.com/package/annalang"><img alt="Build" src="https://img.shields.io/badge/npm-annalang-orange"/></a>
 
 </p>
 <p align="center">
@@ -24,11 +24,11 @@ npm i -g annalang
 
 
 <h4 align="left">Edit the file with a text editor.
-You can also try out your code on <a href="https://bhailang.js.org/#playground">Anna Lang PlayGround</a></h4>
+After deploying the documentation site, you can also try out your code on <a href="https://sdfaheemuddin.github.io/anna-lang/#playground">Anna Lang PlayGround</a></h4>
 
 ```
 hi anna
-  // Write code here
+  anna cheppu "Keka Anna";
 bye anna
 
 ```
@@ -77,7 +77,7 @@ bye anna
 ```
 
 <h3 align="center">Types</h3>
-<p align="center">Numbers and strings are like other languages. Null values can be denoted using <code>nalla</code>. <code>sahi</code> and <code>galat</code> are the boolean values.</p>
+<p align="center">Numbers and strings are like other languages. Null values can be denoted using <code>kali</code>. <code>nijam</code> and <code>tappu</code> are the boolean values.</p>
 
 ```
 

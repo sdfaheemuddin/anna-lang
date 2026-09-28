@@ -1,27 +1,27 @@
 export const TokenTypes = {
   NULL_TYPE: null,
 
-  HI_BHAI_TYPE: "hi anna",
+  HI_ANNA_TYPE: "hi anna",
 
-  BYE_BHAI_TYPE: "bye anna",
+  BYE_ANNA_TYPE: "bye anna",
 
-  BOL_BHAI_TYPE: "anna cheppu",
+  ANNA_CHEPPU_TYPE: "anna cheppu",
 
-  BHAI_YE_HAI_TYPE: "anna idi",
+  ANNA_IDI_TYPE: "anna idi",
 
-  AGAR_BHAI: "okavela anna",
+  OKAVELA_ANNA: "okavela anna",
 
-  WARNA_BHAI: "kakapothe anna",
+  KAKAPOTHE_ANNA: "kakapothe anna",
 
-  NAHI_TO_BHAI: "lekapothe anna",
+  LEKAPOTHE_ANNA: "lekapothe anna",
 
-  JAB_TAK_BHAI: "anna eppudu varaku",
+  ANNA_EPPUDU_VARAKU: "anna eppudu varaku",
 
-  BAS_KAR_BHAI: "chalu anna",
+  CHALU_ANNA: "chalu anna",
 
-  AGLA_DEKH_BHAI: "veredi chudu anna",
+  VEREDI_CHUDU_ANNA: "veredi chudu anna",
 
-  NALLA_TYPE: "kali",
+  KALI_TYPE: "kali",
 
   SEMI_COLON_TYPE: ";",
 
@@ -79,17 +79,17 @@ export const SPEC = [
   { regex: /^,/, tokenType: TokenTypes.COMMA_TYPE },
 
   //Keywords
-  { regex: /^\bhi anna\b/, tokenType: TokenTypes.HI_BHAI_TYPE },
-  { regex: /^\bbye anna\b/, tokenType: TokenTypes.BYE_BHAI_TYPE },
-  { regex: /^\banna cheppu\b/, tokenType: TokenTypes.BOL_BHAI_TYPE },
-  { regex: /^\banna idi\b/, tokenType: TokenTypes.BHAI_YE_HAI_TYPE },
-  { regex: /^\bokavela anna\b/, tokenType: TokenTypes.AGAR_BHAI },
-  { regex: /^\blekapothe anna\b/, tokenType: TokenTypes.NAHI_TO_BHAI },
-  { regex: /^\bkakapothe anna\b/, tokenType: TokenTypes.WARNA_BHAI },
-  { regex: /^\bkali\b/, tokenType: TokenTypes.NALLA_TYPE },
-  { regex: /^\banna eppudu varaku\b/, tokenType: TokenTypes.JAB_TAK_BHAI },
-  { regex: /^\bchalu anna\b/, tokenType: TokenTypes.BAS_KAR_BHAI },
-  { regex: /^\bveredi chudu anna\b/, tokenType: TokenTypes.AGLA_DEKH_BHAI },
+  { regex: /^\bhi anna\b/, tokenType: TokenTypes.HI_ANNA_TYPE },
+  { regex: /^\bbye anna\b/, tokenType: TokenTypes.BYE_ANNA_TYPE },
+  { regex: /^\banna cheppu\b/, tokenType: TokenTypes.ANNA_CHEPPU_TYPE },
+  { regex: /^\banna idi\b/, tokenType: TokenTypes.ANNA_IDI_TYPE },
+  { regex: /^\bokavela anna\b/, tokenType: TokenTypes.OKAVELA_ANNA },
+  { regex: /^\blekapothe anna\b/, tokenType: TokenTypes.LEKAPOTHE_ANNA },
+  { regex: /^\bkakapothe anna\b/, tokenType: TokenTypes.KAKAPOTHE_ANNA },
+  { regex: /^\bkali\b/, tokenType: TokenTypes.KALI_TYPE },
+  { regex: /^\banna eppudu varaku\b/, tokenType: TokenTypes.ANNA_EPPUDU_VARAKU },
+  { regex: /^\bchalu anna\b/, tokenType: TokenTypes.CHALU_ANNA },
+  { regex: /^\bveredi chudu anna\b/, tokenType: TokenTypes.VEREDI_CHUDU_ANNA },
 
   // Number
   { regex: /^[+-]?([\d]*[.])?[\d]+/, tokenType: TokenTypes.NUMBER_TYPE },

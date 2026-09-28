@@ -10,7 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "test": "turbo run test --parallel",
+    "test": "turbo run test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
@@ -44,6 +44,6 @@
   },
   "packageManager": "npm@8.1.4",
   "dependencies": {
-    "bhai-lang-interpreter": "^0.0.1"
+    "anna-lang-interpreter": "^0.0.1"
   }
 }

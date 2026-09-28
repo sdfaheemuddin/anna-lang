@@ -1,6 +1,6 @@
 import Expression from ".";
 
-import { TokenTypes } from "../../../../constants/bhaiLangSpec";
+import { TokenTypes } from "../../../../constants/annaLangSpec";
 import { NodeType } from "../../../../constants/constants";
 import { ASTNode } from "../../types/nodeTypes";
 
@@ -19,16 +19,16 @@ export default class PrimaryExpression extends Expression {
       case TokenTypes.NUMBER_TYPE:
       case TokenTypes.BOOLEAN_TYPE:
         return Literal.getLiteralImpl(token.type).getLiteral();
-      case TokenTypes.NALLA_TYPE:
-        return this._getNallaLiteral();
+      case TokenTypes.KALI_TYPE:
+        return this._getKaliLiteral();
       default:
         return this._getLeftHandSideExpression();
     }
   }
 
-  private _getNallaLiteral() {
-    this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.NALLA_TYPE);
-    return Literal.getLiteralImpl(TokenTypes.NALLA_TYPE).getLiteral();
+  private _getKaliLiteral() {
+    this._tokenExecutor.eatTokenAndForwardLookahead(TokenTypes.KALI_TYPE);
+    return Literal.getLiteralImpl(TokenTypes.KALI_TYPE).getLiteral();
   }
 
   private _getLeftHandSideExpression() {

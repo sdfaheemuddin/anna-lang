@@ -45,7 +45,7 @@ export default class Scope {
       return this._parentScope.get(identifier);
     }
 
-    throw new RuntimeException(`Variable "${identifier}" bana to le pehle.`);
+    throw new RuntimeException(`Anna, declare variable "${identifier}" before using it.`);
   }
 
   assign(identifier: string, value: unknown) {
@@ -60,7 +60,7 @@ export default class Scope {
     }
 
     throw new RuntimeException(
-      `Variable "${identifier}" bana to le pehle fir assign karna.`
+      `Anna, declare variable "${identifier}" before assigning it.`
     );
   }
 
