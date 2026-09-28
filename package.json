@@ -36,6 +36,9 @@
     {
       "name": "Rishabh Tripathi",
       "url": "https://github.com/ristri"
+    },
+    {
+      "name": "Ankit Chouhan"
     }
   ],
   "engines": {
@@ -45,5 +48,9 @@
   "packageManager": "npm@8.1.4",
   "dependencies": {
     "anna-lang-interpreter": "^0.0.1"
+  },
+  "author": {
+    "name": "Syed Faheemuddin",
+    "url": "https://github.com/sdfaheemuddin"
   }
 }
