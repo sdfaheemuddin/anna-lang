@@ -7,8 +7,8 @@
 
 </p>
 <p align="center">
-  This is official repository for anna-lang.<br><br>
-  <b>Anna Lang is a toy programming language written in TypeScript, based on the original Bhai Lang project and adapted with Telugu-style syntax.</b>
+  Official repository for <b>Anna Lang (AnnaLang)</b>.<br><br>
+  <b>Anna Lang is a Telugu-style programming language written in TypeScript, based on the original Bhai Lang project and adapted with Telugu-inspired syntax.</b>
 </p>
 <br>
 
